@@ -1,0 +1,24 @@
+1) Data Cleaning
+   chose a dataset and upload to git repository with next characteristics:
+   - At least 4 variables in the dataset
+   - At least 2 numeric values
+   - at least 1 alphanumeric value
+   - at least 1 date value.
+   - 1 Dataset preferability.
+   - minimum 5000 rows.
+2) Descriptive Statistics
+   Run descriptive statistics to data, identify the entities and relations and draw its diagram. Also group data by entities and obtain statistics from grouped data.
+3) Data Visualization
+   Generate graphs and visulizations, pie diagrams, histogram, boxplots, plots and scatter plots, genearate as many as you can using for loops, at least 5 diferent diagrams.
+4) Statistic Test
+   Prove that labeled data is different by runining ANOVA + T test or kruskall wallis test.
+5) Linear Models + correlation
+   genearate a Linear model from your data, create necessary graphs and obtain its R2 score.
+6) Data classification
+   Create a model using k nearest neighbor and test it.
+7) Data clustering
+   Create a model using k means and test it.
+8) Forecasting
+   Create a model using linear regression and predict new data. Use a time series.
+9) Text analysis
+    Create a word cloud from text data.
