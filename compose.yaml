@@ -1,0 +1,13 @@
+services:
+  practicas:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: python:3.12.4
+    volumes:
+      - ./output:/output
+      - ./datos.csv:/datos.csv
+    env_file:
+      - path: ./.env
+        required: true
+    command: ["python", "/practicas/entrypoint.py"]
