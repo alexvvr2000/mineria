@@ -7,7 +7,4 @@ services:
     volumes:
       - ./output:/output
       - ./datos.csv:/datos.csv
-    env_file:
-      - path: ./.env
-        required: true
     command: ["python", "/practicas/entrypoint.py"]
