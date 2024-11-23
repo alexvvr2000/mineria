@@ -4,13 +4,15 @@ from codigo.practica_2 import obtener_dataframe, obtener_histograma
 from codigo.practica_3 import lista_visualizaciones
 from codigo.practica_4 import ejecutar_anova_ttest
 from codigo.practica_5 import generar_modelo_lineal
+from codigo.practica_6 import generar_modelo_knn
 
-FOLDERS_PRACTICAS = [
+FOLDERS_PRACTICAS: tuple[Path, ...] = (
     Path("/output/Practica2"),
     Path("/output/Practica3"),
     Path("/output/Practica4"),
     Path("/output/Practica5"),
-]
+    Path("/output/Practica6"),
+)
 
 for practica in FOLDERS_PRACTICAS:
     practica.mkdir(
@@ -37,3 +39,6 @@ print("Creada practica 4")
 
 generar_modelo_lineal(ArchivoDatos, FOLDERS_PRACTICAS[3])
 print("Creada practica 5")
+
+generar_modelo_knn(ArchivoDatos, FOLDERS_PRACTICAS[4])
+print("Creada practica 6")
