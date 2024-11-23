@@ -2,8 +2,13 @@ from pathlib import Path
 
 from codigo.practica_2 import obtener_dataframe, obtener_histograma
 from codigo.practica_3 import lista_visualizaciones
+from codigo.practica_4 import ejecutar_anova_ttest
 
-FOLDERS_PRACTICAS = [Path("/output/Practica2"), Path("/output/Practica3")]
+FOLDERS_PRACTICAS = [
+    Path("/output/Practica2"),
+    Path("/output/Practica3"),
+    Path("/output/Practica4"),
+]
 
 for practica in FOLDERS_PRACTICAS:
     practica.mkdir(
@@ -24,3 +29,6 @@ print("Creada practica 2")
 
 archivos = lista_visualizaciones(ArchivoDatos, FOLDERS_PRACTICAS[1])
 print("Creada practica 3")
+
+ejecutar_anova_ttest(ArchivoDatos, FOLDERS_PRACTICAS[2])
+print("Creada practica 4")
