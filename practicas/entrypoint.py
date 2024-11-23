@@ -6,6 +6,7 @@ from codigo.practica_4 import ejecutar_anova_ttest
 from codigo.practica_5 import generar_modelo_lineal
 from codigo.practica_6 import generar_modelo_knn
 from codigo.practica_7 import generar_modelo_kmeans
+from codigo.practica_8 import generar_modelo_lineal_serie_temporal
 
 FOLDERS_PRACTICAS: tuple[Path, ...] = (
     Path("/output/Practica2"),
@@ -14,12 +15,11 @@ FOLDERS_PRACTICAS: tuple[Path, ...] = (
     Path("/output/Practica5"),
     Path("/output/Practica6"),
     Path("/output/Practica7"),
+    Path("/output/Practica8"),
 )
 
 for practica in FOLDERS_PRACTICAS:
-    practica.mkdir(
-        parents=True,
-    )
+    practica.mkdir(parents=True, exist_ok=True)
 
 
 P2_resumen = FOLDERS_PRACTICAS[0] / "Resumen.csv"
@@ -45,8 +45,8 @@ print("Creada practica 5")
 generar_modelo_knn(ArchivoDatos, FOLDERS_PRACTICAS[4])
 print("Creada practica 6")
 
-generar_modelo_knn(ArchivoDatos, FOLDERS_PRACTICAS[5])
-print("Creada practica 6")
-
 generar_modelo_kmeans(ArchivoDatos, FOLDERS_PRACTICAS[5])
 print("Creada practica 7")
+
+generar_modelo_lineal_serie_temporal(ArchivoDatos, FOLDERS_PRACTICAS[6])
+print("Creada practica 8")
