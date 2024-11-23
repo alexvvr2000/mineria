@@ -7,6 +7,7 @@ from codigo.practica_5 import generar_modelo_lineal
 from codigo.practica_6 import generar_modelo_knn
 from codigo.practica_7 import generar_modelo_kmeans
 from codigo.practica_8 import generar_modelo_lineal_serie_temporal
+from codigo.practica_9 import generar_nube_de_palabras
 
 FOLDERS_PRACTICAS: tuple[Path, ...] = (
     Path("/output/Practica2"),
@@ -16,6 +17,7 @@ FOLDERS_PRACTICAS: tuple[Path, ...] = (
     Path("/output/Practica6"),
     Path("/output/Practica7"),
     Path("/output/Practica8"),
+    Path("/output/Practica9"),
 )
 
 for practica in FOLDERS_PRACTICAS:
@@ -50,3 +52,6 @@ print("Creada practica 7")
 
 generar_modelo_lineal_serie_temporal(ArchivoDatos, FOLDERS_PRACTICAS[6])
 print("Creada practica 8")
+
+generar_nube_de_palabras(FOLDERS_PRACTICAS[7], ArchivoDatos)
+print("Creada practica 9")
