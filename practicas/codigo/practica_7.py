@@ -45,7 +45,6 @@ def generar_modelo_kmeans(dataframe: pd.DataFrame, carpeta_destino: Path) -> lis
     n_clusters = 5
     modelo = KMeans(n_clusters=n_clusters, random_state=42)
     modelo.fit(X_entrenamiento)
-    print(modelo)
 
     y_predicho_entrenamiento = modelo.predict(X_entrenamiento)
     y_predicho_prueba = modelo.predict(X_prueba)
